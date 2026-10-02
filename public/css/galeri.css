@@ -1,0 +1,124 @@
+/* ============================================================
+   SMKN 4 BOGOR — galeri.css
+   Dipakai oleh : galeri.blade.php
+   Catatan      : grid & modal pakai Bootstrap (row/col/modal),
+                  css ini cuma penyesuaian biar senada home
+============================================================ */
+
+
+/* =========================================
+   1. HEADER HALAMAN
+========================================= */
+
+.gallery-section {
+    width: calc(100% - 48px);
+    max-width: 1132px;
+    margin: 0 auto;
+    padding: 65px 0 70px;
+}
+
+.gallery-title {
+    color: #111827;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.gallery-description {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   2. ITEM FOTO
+========================================= */
+
+.gallery-item {
+    position: relative;
+    height: 170px;
+
+    overflow: hidden;
+    border-radius: 9px;
+    background: #e8eef1;
+
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: transform .3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* CAPTION DI BAWAH FOTO */
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 26px 12px 9px;
+
+    background: linear-gradient(transparent, rgba(0, 0, 0, .6));
+
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   3. MODAL LIGHTBOX
+========================================= */
+
+.gallery-modal .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #101820;
+}
+
+.gallery-modal .modal-header {
+    border-bottom: none;
+}
+
+.gallery-modal .modal-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.gallery-modal .modal-body img {
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   4. RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .gallery-section {
+        width: calc(100% - 30px);
+        padding: 40px 0 50px;
+    }
+
+    .gallery-item {
+        height: 130px;
+    }
+}

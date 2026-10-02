@@ -1,0 +1,849 @@
+/* ============================================================
+   SMKN 4 BOGOR — admin.css
+   Desain admin disamain sama tampilan website (teal #0c88ae)
+   Struktur HTML tetap pakai class Bootstrap
+============================================================ */
+
+
+/* =========================================
+   1. DASAR
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fa;
+    color: #334155;
+}
+
+
+/* =========================================
+   2. NAVBAR ADMIN
+========================================= */
+
+.admin-navbar {
+    height: 64px;
+    background: #0c88ae;
+}
+
+.admin-nav-container {
+    width: 100%;
+    max-width: 1180px;
+    height: 100%;
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Brand */
+
+.admin-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.admin-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.admin-brand-name {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-brand-sub {
+    color: rgba(255, 255, 255, .85);
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* Menu */
+
+.admin-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-menu-item {
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 18px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.admin-menu-item:hover {
+    background: rgba(255, 255, 255, .15);
+    color: #ffffff;
+}
+
+.admin-menu-item.active {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #0c88ae;
+}
+
+.admin-menu-soon {
+    padding: 2px 6px;
+
+    background: rgba(255, 255, 255, .25);
+    border-radius: 8px;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+/* ===== BARU: AREA KANAN NAVBAR (website + logout) ===== */
+
+.admin-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tombol lihat website */
+
+.admin-visit {
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    background: #ffffff;
+    border-radius: 18px;
+
+    color: #0c88ae;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.admin-visit:hover {
+    background: #edf8fb;
+    color: #0c88ae;
+}
+
+/* ===== BARU: TOMBOL LOGOUT ===== */
+
+.admin-logout {
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    background: rgba(255, 255, 255, .18);
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 18px;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.admin-logout:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+
+/* =========================================
+   3. KONTEN
+========================================= */
+
+.admin-content {
+    width: calc(100% - 48px);
+    max-width: 1132px;
+    margin: 0 auto;
+    padding: 30px 0 70px;
+}
+
+.admin-heading {
+    color: #111827;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.admin-subheading {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+
+/* =========================================
+   4. KARTU STATISTIK (dashboard)
+========================================= */
+
+.admin-stat-card {
+    display: block;
+    height: 100%;
+
+    padding: 20px;
+
+    background: #ffffff;
+    border: 1px solid #dce3e7;
+    border-radius: 11px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+
+    text-decoration: none;
+
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .1);
+}
+
+.admin-stat-card.disabled {
+    opacity: .65;
+}
+
+.admin-stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+
+    background: #e9f7fb;
+    border-radius: 8px;
+
+    color: #1498c2;
+    font-size: 20px;
+}
+
+.admin-stat-value {
+    display: block;
+
+    color: #172b4d;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.admin-stat-label {
+    display: block;
+
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.admin-stat-action {
+    display: block;
+
+    color: #159ac3;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   5. KARTU + TABEL
+========================================= */
+
+.admin-card {
+    background: #ffffff;
+    border: 1px solid #dce3e7;
+    border-radius: 11px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #e6edf1;
+}
+
+.admin-card-header h5 {
+    color: #111827;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.admin-card-body {
+    padding: 18px;
+}
+
+.admin-table thead th {
+    background: #edf8fb;
+
+    color: #334155;
+    font-size: 11px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #dce3e7;
+}
+
+.admin-table td {
+    font-size: 13px;
+}
+
+.admin-table-img {
+    width: 60px;
+    height: 45px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Badge singkatan jurusan */
+
+.admin-badge {
+    display: inline-block;
+
+    padding: 4px 10px;
+
+    background: #e9f7fb;
+    border: 1px solid #55b8db;
+    border-radius: 12px;
+
+    color: #159ac3;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   6. TOMBOL & FORM (warna senada website)
+========================================= */
+
+.btn-teal {
+    background: #159ac3;
+    border: 1px solid #159ac3;
+    color: #ffffff;
+}
+
+.btn-teal:hover {
+    background: #0d7ea3;
+    border-color: #0d7ea3;
+    color: #ffffff;
+}
+
+.btn-outline-teal {
+    background: #ffffff;
+    border: 1px solid #159ac3;
+    color: #159ac3;
+}
+
+.btn-outline-teal:hover {
+    background: #e9f7fb;
+    border-color: #159ac3;
+    color: #0d7ea3;
+}
+
+.admin-alert {
+    border: none;
+    border-radius: 11px;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: #55b8db;
+    box-shadow: 0 0 0 .2rem rgba(21, 154, 195, .15);
+}
+
+.form-label {
+    color: #334155;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   7. RESPONSIVE
+========================================= */
+
+@media (max-width: 820px) {
+
+    .admin-navbar {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .admin-nav-container {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .admin-menu {
+        flex-wrap: wrap;
+    }
+
+    .admin-content {
+        width: calc(100% - 30px);
+    }
+}
+
+
+/* =========================================
+   8. HALAMAN LOGIN (versi premium)
+========================================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: linear-gradient(135deg, #086d90 0%, #0c88ae 45%, #15a6d6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ---- DEKORASI: bulat-bulat mengambang ---- */
+
+.login-shape {
+    position: absolute;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+    animation: loginFloat 8s ease-in-out infinite;
+}
+
+.login-shape-1 {
+    width: 340px;
+    height: 340px;
+
+    top: -110px;
+    left: -90px;
+}
+
+.login-shape-2 {
+    width: 220px;
+    height: 220px;
+
+    bottom: -70px;
+    right: -50px;
+
+    animation-delay: 2s;
+}
+
+.login-shape-3 {
+    width: 110px;
+    height: 110px;
+
+    top: 18%;
+    right: 12%;
+
+    background: rgba(255, 255, 255, .12);
+
+    animation-delay: 4s;
+}
+
+@keyframes loginFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-22px);
+    }
+}
+
+
+/* ---- PANEL UTAMA (kiri + kanan) ---- */
+
+.login-panel {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 880px;
+    min-height: 560px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(0, 20, 40, .35);
+    overflow: hidden;
+}
+
+
+/* ---- SISI KIRI: BRANDING ---- */
+
+.login-hero {
+    padding: 44px 38px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,.14), transparent 45%),
+        linear-gradient(160deg, #0c88ae, #085f7e);
+
+    color: #ffffff;
+}
+
+.login-hero-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 13px;
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 16px;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.login-hero h2 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    margin-bottom: 12px;
+}
+
+.login-hero p {
+    color: rgba(255, 255, 255, .85);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+
+    max-width: 300px;
+}
+
+
+/* ILUSTRASI kartu mengambang */
+
+.login-illustration {
+    position: relative;
+
+    margin-top: 34px;
+    height: 190px;
+}
+
+.login-float-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 15px;
+
+    background: rgba(255, 255, 255, .96);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 20, 40, .28);
+
+    animation: loginFloat 6s ease-in-out infinite;
+}
+
+.login-float-card strong {
+    display: block;
+
+    color: #172b4d;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.login-float-card small {
+    display: block;
+
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.login-float-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9f7fb;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+/* Posisi & ritme tiap kartu */
+
+.login-float-1 {
+    top: 0;
+    left: 0;
+}
+
+.login-float-2 {
+    top: 64px;
+    right: 6px;
+
+    animation-delay: 1.5s;
+}
+
+.login-float-3 {
+    bottom: 0;
+    left: 34px;
+
+    animation-delay: 3s;
+}
+
+
+/* ---- SISI KANAN: FORM ---- */
+
+.login-form-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 34px;
+}
+
+.login-form-inner {
+    width: 100%;
+    max-width: 330px;
+}
+
+/* Logo dengan lingkaran */
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.login-logo-ring {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 14px;
+
+    background: linear-gradient(135deg, #e9f7fb, #d3eef8);
+    border: 3px solid #0c88ae;
+    border-radius: 50%;
+
+    box-shadow: 0 6px 18px rgba(12, 136, 174, .3);
+}
+
+.login-logo-ring img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.login-brand h1 {
+    color: #172b4d;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.login-brand p {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 4px 0 0;
+}
+
+
+/* Input & tombol */
+
+.login-input {
+    border: 1px solid #d7e3ea;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.login-input:focus {
+    border-color: #159ac3;
+    box-shadow: 0 0 0 .2rem rgba(21, 154, 195, .15);
+}
+
+.login-btn {
+    border-radius: 10px;
+    font-size: 13px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(21, 154, 195, .35);
+}
+
+.login-footer {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.login-footer a {
+    color: #159ac3;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---- RESPONSIVE LOGIN ---- */
+
+@media (max-width: 780px) {
+
+    .login-panel {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    /* Di HP, sisi branding diringkas jadi header kecil */
+    .login-hero {
+        padding: 28px 26px 20px;
+    }
+
+    .login-hero p {
+        display: none;
+    }
+
+    .login-illustration {
+        display: none;
+    }
+
+    .login-hero h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+}
+
+/* =========================================
+   9. PENYESUAIAN ICON NAVBAR & HEADER
+========================================= */
+
+/* Jarak icon ke teks di tombol kanan navbar */
+
+.admin-visit {
+    gap: 7px;
+}
+
+.admin-logout {
+    gap: 7px;
+}
+
+/* Jarak icon ke teks di judul card
+   (misal: icon obrolan + "Komentar Pengunjung") */
+
+.admin-card-header h5 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* Menu navbar: biar rata & agak longgar
+   walaupun item makin banyak */
+
+.admin-menu-item .bi {
+    font-size: 14px;
+}
+
+/* =========================================
+   10. NAVBAR LEBAR (biar muat 5 menu + 2 tombol)
+========================================= */
+
+/* Perlebar area navbar */
+
+.admin-nav-container {
+    max-width: 1320px;
+    gap: 12px;
+}
+
+/* Menu: jarak antar item & padding dikurangi dikit */
+
+.admin-menu {
+    gap: 8px;
+}
+
+.admin-menu-item {
+    padding: 0 12px;
+    gap: 6px;
+
+    font-size: 11.5px;
+}
+
+/* Tombol kanan: padding dikurangi dikit */
+
+.admin-visit,
+.admin-logout {
+    padding: 0 12px;
+
+    font-size: 11.5px;
+}
+
+/* =========================================
+   11. BINTANG RATING (tabel komentar)
+========================================= */
+
+.admin-mini-stars {
+    color: #f5b942;
+    font-size: 13px;
+
+    display: inline-flex;
+    gap: 2px;
+}
