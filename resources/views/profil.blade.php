@@ -302,12 +302,12 @@
 
 
     <!-- ================= TOMBOL KE ATAS ================= -->
-    <button
-        class="back-top"
-        onclick="const c = document.querySelector('.profile-content'); c ? c.scrollTo({top: 0, behavior: 'smooth'}) : window.scrollTo({top: 0, behavior: 'smooth'});"
-    >
-        <i class="bi bi-arrow-up"></i>
-    </button>
+   <button
+    class="back-top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+>
+    <i class="bi bi-arrow-up"></i>
+</button>
 
 
     <!-- ================= SCRIPT MENU SIDEBAR ================= -->
