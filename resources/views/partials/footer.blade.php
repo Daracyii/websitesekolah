@@ -103,12 +103,7 @@
                     </div>
                 @endif
 
-
-                <form
-                    method="POST"
-                    action="{{ route('komentar.store') }}"
-                    class="footer-form"
-                >
+                <form action="{{ route('komentar.store') }}" method="POST">
                     @csrf
 
                     <input
