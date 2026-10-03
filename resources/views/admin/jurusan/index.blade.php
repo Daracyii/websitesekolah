@@ -41,16 +41,16 @@
                             <td>{{ $loop->iteration }}</td>
 
                             <td>
-                                @if ($jurusan->gambar)
-                                    <img
-                                        src="{{ asset('storage/' . $jurusan->gambar) }}"
-                                        alt="{{ $jurusan->nama }}"
-                                        class="admin-table-img"
-                                    >
-                                @else
-                                    <span class="text-muted">—</span>
-                                @endif
-                            </td>
+    @if ($jurusan->gambar)
+        <img
+            src="{{ $jurusan->url_gambar }}"
+            alt="{{ $jurusan->nama }}"
+            class="admin-table-img"
+        >
+    @else
+        <span class="text-muted">—</span>
+    @endif
+</td>
 
                             <td>
                                 <span class="admin-badge">{{ $jurusan->singkatan }}</span>
