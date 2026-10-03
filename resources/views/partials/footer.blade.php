@@ -103,7 +103,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('komentar.store') }}" method="POST">
+                <form action="https://websitesekolah-production.up.railway.app/komentar" method="POST">
                     @csrf
 
                     <input
