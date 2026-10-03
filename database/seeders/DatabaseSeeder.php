@@ -24,34 +24,38 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        // ================= JURUSAN =================
-        Jurusan::firstOrCreate(['slug' => 'pplg'], [
+         // ================= JURUSAN =================
+        Jurusan::updateOrCreate(['slug' => 'pplg'], [
             'singkatan'      => 'PPLG',
             'nama'           => 'Pengembangan Perangkat Lunak dan Gim',
+            'gambar'         => 'images/logo pplg.jpeg',
             'deskripsi'      => 'Belajar membuat aplikasi, website, dan gim.',
             'kompetensi'     => "Pemrograman Web (HTML, CSS, JavaScript, PHP)\nPengembangan Aplikasi Mobile\nPembuatan dan Desain Gim\nBasis Data (MySQL)\nUI/UX Design",
             'peluang_kerja'  => "Web Developer\nMobile Developer\nGame Developer\nUI/UX Designer\nDatabase Administrator\nMahasiswa Teknik Informatika",
         ]);
 
-        Jurusan::firstOrCreate(['slug' => 'tjkt'], [
+        Jurusan::updateOrCreate(['slug' => 'tjkt'], [
             'singkatan'      => 'TJKT',
             'nama'           => 'Teknik Jaringan Komputer dan Telekomunikasi',
+            'gambar'         => 'images/logo tkj.jpeg',
             'deskripsi'      => 'Belajar jaringan komputer, server, dan keamanan jaringan.',
             'kompetensi'     => "Instalasi Jaringan LAN/WAN\nAdministrasi Server\nKonfigurasi Router & Switching (Mikrotik, Cisco)\nKeamanan Jaringan (Cyber Security Dasar)\nPerakitan dan Perawatan Komputer",
             'peluang_kerja'  => "Teknisi Jaringan\nNetwork Administrator\nIT Support\nSystem Administrator\nTechnical Support Engineer\nMahasiswa Teknik Komputer/Jaringan",
         ]);
 
-        Jurusan::firstOrCreate(['slug' => 'to'], [
+        Jurusan::updateOrCreate(['slug' => 'to'], [
             'singkatan'      => 'TO',
             'nama'           => 'Teknik Otomotif',
+            'gambar'         => 'images/logo to.jpeg',
             'deskripsi'      => 'Belajar perawatan dan perbaikan kendaraan bermotor.',
             'kompetensi'     => "Perawatan Mesin Kendaraan Bermotor\nSistem Kelistrikan & Injeksi Otomotif\nTune-up dan Diagnosa Kerusakan\nServis Chassis dan Suspensi\nK3 Bengkel",
             'peluang_kerja'  => "Mekanik Otomotif\nService Advisor\nTeknisi Bengkel Resmi\nOwner Bengkel\nQC Industri Otomotif\nMahasiswa D3/S1 Otomotif",
         ]);
 
-        Jurusan::firstOrCreate(['slug' => 'tp'], [
+        Jurusan::updateOrCreate(['slug' => 'tp'], [
             'singkatan'      => 'TP',
             'nama'           => 'Teknik Pengelasan',
+            'gambar'         => 'images/logo tp.jpeg',
             'deskripsi'      => 'Belajar fabrikasi logam dan teknik pengelasan.',
             'kompetensi'     => "Pengelasan SMA, MIG, dan TIG\nFabrikasi dan Konstruksi Logam\nMembaca Gambar Teknik (Blueprint)\nPengujian Hasil Las (NDT Dasar)\nK3 Las",
             'peluang_kerja'  => "Welder / Fabricator\nInspector Las (Sertifikasi BNSP)\nOperator Produksi Logam\nTeknisi Konstruksi Baja\nWirausaha Bengkel Las\nMahasiswa Teknik Mesin",
