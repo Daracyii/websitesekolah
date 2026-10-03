@@ -12,6 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
 
+        // Percayai proxy Railway agar Laravel mengenali koneksi HTTPS
+        $middleware->trustProxies(at: '*');
+
         // Kalau belum login buka halaman admin,
         // lempar ke halaman login admin (bukan login bawaan)
         $middleware->redirectGuestsTo('/admin/login');
