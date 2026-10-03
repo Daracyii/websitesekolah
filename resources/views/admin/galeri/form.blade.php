@@ -30,7 +30,7 @@
 
 
                 <form
-                    action="{{ isset($galeri) ? route('admin.galeri.update', $galeri) : route('admin.galeri.store') }}"
+                    action="{{ isset($galeri) ? str_replace('http://', 'https://', route('admin.galeri.update', $galeri)) : str_replace('http://', 'https://', route('admin.galeri.store')) }}"
                     method="POST"
                     enctype="multipart/form-data"
                 >
