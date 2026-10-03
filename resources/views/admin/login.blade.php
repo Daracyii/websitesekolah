@@ -111,7 +111,7 @@
 
 
                     <!-- FORM -->
-                    <form method="POST" action="{{ route('admin.login.proses') }}">
+                    <<form method="POST" action="https://websitesekolah-production.up.railway.app/admin/login">
                         @csrf
 
                         <div class="mb-3">
